@@ -31,7 +31,7 @@ namespace AppWeb.Data_Access.Model
         [StringLength(maximumLength: 20, MinimumLength = 7)]
         public int NumeroLegajo { get; set; }
 
-        [RegularExpression("//")]
+        [RegularExpression(@"\S+@\S+\.\S+")]
         public string? Email { get; set; }
 
         [StringLength(15, MinimumLength = 7)]

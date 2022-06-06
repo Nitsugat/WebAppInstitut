@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 
+
+
 namespace AppWeb.Data_Access.Model
 {
     public class Student
@@ -35,7 +37,7 @@ namespace AppWeb.Data_Access.Model
         [StringLength(15,MinimumLength =7)]
         public int NroMovilPhone { get; set; }
 
-        [RegularExpression("/@/")]
+        [RegularExpression(@"\S+@\S+\.\S+")] 
         public string? Email { get; set; }
 
         [StringLength(20,MinimumLength=7)]
